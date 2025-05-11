@@ -29,3 +29,14 @@ avatar.addEventListener("click", () => {
     alert(funnyMessages[Math.floor(Math.random() * funnyMessages.length)]);
   }, 1000);
 });
+
+// Detect first click and play music
+const music = document.getElementById("bgMusic");
+let musicPlayed = false;
+
+document.body.addEventListener("click", function () {
+  if (!musicPlayed) {
+    music.play();
+    musicPlayed = true;
+  }
+});
